@@ -13,7 +13,7 @@
     "fontawesome": {
       "type": "package",
       "package": {
-        "name": "FortAwesome/fontawesome",
+        "name": "fontawesome/fontawesome",
         "version": "4.7.0",
         "type": "drupal-library",
         "dist": {
@@ -24,6 +24,6 @@
     }
   },
   "require": {
-    "FortAwesome/fontawesome": "^4.7"
+    "fontawesome/fontawesome": "4.*"
   }
 }
