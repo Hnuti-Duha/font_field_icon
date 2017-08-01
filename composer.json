@@ -24,6 +24,6 @@
     }
   },
   "require": {
-    "FortAwesome/fontawesome": "4.7.0"
+    "FortAwesome/fontawesome": "^4.7"
   }
 }
