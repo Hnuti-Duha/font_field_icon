@@ -10,6 +10,6 @@
     "source": "http://cgit.drupalcode.org/font_field_icon"
   },
   "require": {
-    "fortawesome/font-awesome": "4.*"
+
   }
 }
