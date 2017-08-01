@@ -9,21 +9,7 @@
     "issues": "https://www.drupal.org/project/issues/font_field_icon",
     "source": "http://cgit.drupalcode.org/font_field_icon"
   },
-  "repositories": {
-    "fontawesome": {
-      "type": "package",
-      "package": {
-        "name": "fontawesome/fontawesome",
-        "version": "4.7.0",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip",
-          "type": "zip"
-        }
-      }
-    }
-  },
   "require": {
-    "fontawesome/fontawesome": "4.*"
+    "fortawesome/font-awesome": "4.*"
   }
 }
