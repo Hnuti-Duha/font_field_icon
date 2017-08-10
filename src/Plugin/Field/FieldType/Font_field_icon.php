@@ -18,7 +18,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface as StorageDefinition;
  *   default_formatter = "FontFieldIconDefaultFormatter"
  * )
  */
-class FontFieldIcon extends FieldItemBase {
+class Font_field_icon extends FieldItemBase {
 
   /**
    * {@inheritdoc}
