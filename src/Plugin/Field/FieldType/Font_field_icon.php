@@ -6,7 +6,6 @@ use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\TypedData\DataDefinition;
 use Drupal\Core\Field\FieldStorageDefinitionInterface as StorageDefinition;
 
-
 /**
  * Plugin implementation of the 'font_field_icon' field type.
  *
@@ -22,8 +21,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface as StorageDefinition;
 class Font_field_icon extends FieldItemBase {
 
   /**
-   * Field type properties definition.
-   *
+   * {@inheritdoc}
    */
   public static function propertyDefinitions(StorageDefinition $storage) {
 
@@ -39,8 +37,7 @@ class Font_field_icon extends FieldItemBase {
   }
 
   /**
-   * Field type schema definition.
-   *
+   * {@inheritdoc}
    */
   public static function schema(StorageDefinition $storage) {
     $columns = [];
@@ -60,8 +57,7 @@ class Font_field_icon extends FieldItemBase {
   }
 
   /**
-   * Define when the field type is empty.
-   *
+   * {@inheritdoc}
    */
   public function isEmpty() {
     $isEmpty =
@@ -70,4 +66,5 @@ class Font_field_icon extends FieldItemBase {
 
     return $isEmpty;
   }
+
 }

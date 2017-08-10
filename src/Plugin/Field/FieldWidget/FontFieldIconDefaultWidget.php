@@ -20,46 +20,46 @@ use Drupal\Core\Form\FormStateInterface;
 class FontFieldIconDefaultWidget extends WidgetBase {
 
   /**
-   * Define the form for the field type.
-   *
+   * {@inheritdoc}
    */
   public function formElement(
     FieldItemListInterface $items,
     $delta,
-    Array $element,
-    Array &$form,
+    array $element,
+    array &$form,
     FormStateInterface $formState
   ) {
 
     $element['font_field_icon'] = [
       '#type' => 'select',
-      '#title' => t('Select icon'),
-      '#options' => $this->get_icons_from_file(),
+      '#title' => $this->t('Select icon'),
+      '#options' => $this->getIconsFromFile(),
       '#default_value' => isset($items[$delta]->font_field_icon) ? $items[$delta]->font_field_icon : NULL,
       '#empty_value' => '',
     ];
 
     $element['font_field_icon_link'] = [
       '#type' => 'textfield',
-      '#title' => t('Text for icon'),
+      '#title' => $this->t('Text for icon'),
       '#default_value' => isset($items[$delta]->font_field_icon_link) ? $items[$delta]->font_field_icon_link : NULL,
       '#empty_value' => '',
-      '#placeholder' => t('Text for icon'),
-      '#description' => 'Provide the link e.g. https://twitter.com',
+      '#placeholder' => $this->t('Text for icon'),
+      '#description' => $this->t('Provide the link e.g. https://twitter.com'),
     ];
 
     return $element;
   }
 
   /**
-   * Get CSS content from the file
-   * and return to the Icons select
+   * Get CSS content from the file and return to the Icons select.
+   *
+   * @return array
+   *   Return icon.
    */
-  public function get_icons_from_file() {
+  public function getIconsFromFile() {
     $filepath = DRUPAL_ROOT . '/libraries/fontawesome/css/font-awesome.css';
     $content = file_exists($filepath) ? file_get_contents($filepath) : '';
     if ($content) {
-      // Parse the CSS content
       if (preg_match_all('@\.fa-(.*?):before@m', $content, $matches)) {
         $icons = $matches[1];
         asort($icons);
@@ -73,4 +73,5 @@ class FontFieldIconDefaultWidget extends WidgetBase {
       return ['None' => 'Read readme file!'];
     }
   }
+
 }

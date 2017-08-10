@@ -19,8 +19,7 @@ use Drupal\Core\Field\FormatterBase;
 class FontFieldIconShowFormatter extends FormatterBase {
 
   /**
-   * Define how the field type is showed.
-   *
+   * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
@@ -41,4 +40,5 @@ class FontFieldIconShowFormatter extends FormatterBase {
     }
     return $elements;
   }
+
 }
