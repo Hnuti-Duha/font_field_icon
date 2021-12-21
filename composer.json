@@ -1,5 +1,5 @@
 {
-  "name": "drupal/font_field_icon",
+  "name": "hnuti-duha/font_field_icon",
   "type": "drupal-module",
   "description": "Provides an ability to add social or other fontawesome icon to text field",
   "license": "GPL-2.0+",
